@@ -13,12 +13,14 @@
     --color-text-links-top-page: #5c5d5f --color-bg-card: #fafbfb;
     --color-border-card: #e5e5e5;
     --color-shadow-card: #dedcdc;
+    --color-bg-card: #fafbfb;
     --color-bg-green-container: #eafaf2;
     --color-first-card-community: #f4f6fe;
     --color-community-cards-title: #202223;
     --color-bg-footer-bottom: #f6f6f7;
     --color-white-box: white;
     --color-li-footer-bottom: #6f7175;
+    --color-white-dropdown: white;
 
 
 }
@@ -35,7 +37,6 @@ body {
     margin: 0;
     word-spacing: -0.5px;
     padding: 0;
-    background-color: var(--color-white);
     box-sizing: border-box;
 }
 
@@ -63,7 +64,6 @@ body * {
 }
 
 .hamburguer-icon {
-    display: flex;
     display: none;
     align-items: center;
     margin-left: 35px;
@@ -189,7 +189,7 @@ ul {
     width: 165px;
     height: 307px;
     border-radius: .15cm;
-    background-color: var(--color-white);
+    background-color: var(--color-white-dropdown);
     box-shadow: 1px 2px 18px rgb(235, 234, 234);
     top: 43px;
     margin-left: -117px;
@@ -362,8 +362,7 @@ input[type="search"] {
 /* main page */
 
 main {
-    box-sizing: border-box;
-    padding: 0;
+    background-color: var(--color-white);
 }
 
 .top-page {
@@ -668,7 +667,6 @@ main {
     grid-template-columns: repeat(4, .2fr);
     justify-content: center;
     grid-column-gap: 10px;
-
 }
 
 .first-card {
@@ -747,11 +745,9 @@ main {
 /* footer */
 
 footer {
-    margin-top: 60px;
+    padding-top: 60px;
     height: auto;
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
-
+    background-color: var(--color-white);
 }
 
 .footer-top {
@@ -760,6 +756,8 @@ footer {
     display: flex;
     justify-content: center;
     border-radius: .3cm;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
 }
 
 
@@ -791,6 +789,8 @@ footer {
     background-color: var(--color-bg-footer-bottom);
     margin-top: -17px;
     height: 70px;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
 }
 
 .footer-bottom ul {
@@ -831,6 +831,14 @@ footer {
     --color-community-cards-title: white;
     --color-bg-footer-bottom: #22292b;
     --color-li-footer-bottom: #868a8e;
+    --color-white-dropdown: #171d1e;
+    --color-light-grey-dropdown: #808387;
+    --color-dark-grey-dropdown: white;
+    --color-hover-dropdown: #22292b;
+}
+.dark-mode #dropdown {
+    box-shadow: none;
+    border: 1px solid #243134;
 }
 
 .dark-mode .arrow {
@@ -883,29 +891,6 @@ footer {
     display: none;
 }
 
-.dark-mode .mobile-image-top {
-    display: none;
-}
-
-.dark-mode .mobile-image-top-dark {
-    display: none;
-}
-
-.dark-mode .mobile-image-middle {
-    display: none;
-}
-
-.dark-mode .mobile-image-middle-dark {
-    display: none;
-}
-
-.dark-mode .mobile-image-bottom {
-    display: none;
-}
-
-.dark-mode .mobile-image-bottom-dark {
-    display: none;
-}
 
 .dark-mode .search-bar {
     background-color: #171d1e;
