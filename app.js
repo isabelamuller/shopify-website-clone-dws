@@ -12,6 +12,6 @@ const dropdownActive = () => {
 
  const modeSwitcher = () => {
     let bodyElement = document.body;
-    let navbarElement = document.getElementsByClassName("navbar")
     bodyElement.classList.toggle("dark-mode");
+
  }

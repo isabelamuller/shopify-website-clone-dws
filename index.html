@@ -8,7 +8,10 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <script src="app.js"></script>
-    <script src="https://kit.fontawesome.com/3d2b029ac9.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3d2b029ac9.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=JetBrains+Mono:wght@400;700;800&amp;display=swap"
@@ -27,11 +30,12 @@
         <div class="hamburguer-icon">
           <i class="fa fa-bars"></i>
         </div>
-        <div class="logo-mobile"></div>
+        <div class="logo-mobile-light"></div>
+        <div class="logo-mobile-dark"></div>
         <div class="magnifying-glass-icon-mobile"></div>
         <div class="navbar-content">
-          <div class="logo-pc"></div>
-          
+          <div class="logo-pc-light"></div>
+          <div class="logo-pc-dark"></div>
           <div class="menu-left">
             <ul>
               <li class="navbar-link">
@@ -48,7 +52,7 @@
               <li class="navbar-link">
                 <a href="https://shopify.dev/marketplaces">Marketplaces</a>
               </li>
-              <img src="images/dot.png" class="little-dot-pic" />
+              <span class="dot"></span>
               <li class="navbar-link">
                 <button
                   onclick="dropdownActive()"
@@ -115,7 +119,7 @@
                   </ul>
                 </div>
               </div>
-              <img src="images/arrow.png" class="arrow-pic" />
+              <img src="images/arrow.svg" class="arrow" />
             </ul>
           </div>
           <div class="menu-right">
@@ -123,17 +127,19 @@
               <input class="search-bar" type="search" placeholder="Search" />
             </div>
             <div class="magnifying-glass-icon-pc"></div>
-            <div class="moon-sun" onclick="modeSwitcher()"></div>
+            <div class="magnifying-glass-icon-pc-dark"></div>
+            <img src="images/moon.svg" class="moon-icon" onclick="modeSwitcher()"/>
+            <img src="images/yellow-sun.svg" class="sun-icon" onclick="modeSwitcher()"/>
             <div class="mini-menu-right">
               <ul>
-              <li class="mini-menu-right-list-item">
-                <a href="https://accounts.shopify.com/lookup?">Log in</a>
-              </li>
-              <li class="mini-menu-right-list-item">
-                <a href="https://accounts.shopify.com/signup">Sign up</a>
-              </li>
+                <li class="mini-menu-right-list-item">
+                  <a href="https://accounts.shopify.com/lookup?">Log in</a>
+                </li>
+                <li class="mini-menu-right-list-item">
+                  <a href="https://accounts.shopify.com/signup">Sign up</a>
+                </li>
+              </ul>
             </div>
-            </ul>
           </div>
         </div>
       </nav>
@@ -143,6 +149,8 @@
         <section class="main-first-half">
           <div class="first-half-wrapper">
             <div class="mobile-image-top"></div>
+            <div class="mobile-image-top-dark"></div>
+            
             <div class="first-text">
               <h1>
                 Build anything.<br />
@@ -157,6 +165,7 @@
               </h1>
             </div>
             <div class="mobile-image-middle"></div>
+            <div class="mobile-image-middle-dark"></div>
             <div class="second-text">
               <div class="second-text-part">
                 <h3>
@@ -281,10 +290,12 @@
               </section>
             </div>
             <div class="mobile-image-bottom"></div>
+            <div class="mobile-image-bottom-dark"></div>
           </div>
         </section>
         <section class="main-second-half">
-          <div class="image-main-second"></div>
+          <div class="image-main-second-light"></div>
+          <div class="image-main-second-dark"></div>
         </section>
       </div>
       <section class="green-container">
