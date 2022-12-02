@@ -26,6 +26,7 @@
     --color-close-btn-side-nav: #5d5f62;
     --color-border-top-side-nav: #dedfe2;
     --color-selection-menu-text: #153127;
+    --color-popup-border: #f1f2f3;
 }
 
 * {
@@ -382,7 +383,7 @@ ul {
     background-color: var(--color-white);
     margin: auto;
     height: 36px;
-    border: 3px solid #f1f2f3;
+    border: 3px solid var(--color-popup-border);
     border-radius: .1cm;
     width: 31%;
     display: flex;
@@ -401,6 +402,7 @@ ul {
     background-size: 14px;
     background-position: right;
 }
+
 .lupa-popup {
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg");
     background-size: 12px;
@@ -410,6 +412,7 @@ ul {
     background-repeat: no-repeat;
     background-position: 4px center;
 }
+
 .custom-select-menu {
     margin-right: 1rem;
     margin-left: 1rem;
@@ -417,25 +420,30 @@ ul {
     align-items: center;
     background-color: var(--color-bg-card);
 }
+
 .select-box {
     background-color: var(--color-bg-card);
     width: auto;
     border: none;
     height: 25px;
     border-radius: 4px;
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
     font-family: 'JetBrains Mono', monospace;
     color: var(--color-selection-menu-text);
     font-size: 9px;
 }
+
 .up-and-down-arrow-icon {
     background-image: url("images/up-and-down-arrow.svg");
     background-repeat: no-repeat;
     height: 10px;
     width: 7px;
     background-size: 6px;
+    padding-right: .5rem;
     filter: invert(36%) sepia(30%) saturate(50%) hue-rotate(177deg) brightness(95%) contrast(92%);
 }
 
@@ -915,6 +923,8 @@ footer {
     --color-light-grey-dropdown: #808387;
     --color-dark-grey-dropdown: white;
     --color-hover-dropdown: #22292b;
+    --color-popup-border: #243134;
+    --color-selection-menu-text: white;
 }
 
 .dark-mode #dropdown {
@@ -941,6 +951,24 @@ footer {
 
 .dark-mode .moon-icon {
     display: none;
+}
+
+.dark-mode .popup-search-bar-input {
+    background-color: #0e1213;
+    background-image: url("images/bar-dark.png");
+}
+
+.dark-mode .lupa-popup {
+    filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(132deg) brightness(109%) contrast(106%);
+}
+
+.dark-mode .up-and-down-arrow-icon {
+    filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(132deg) brightness(109%) contrast(106%);
+}
+
+.dark-mode .search-bar-popup {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode .image-main-second-light {
@@ -975,6 +1003,11 @@ footer {
 
 .dark-mode .logo-mobile-light {
     display: none;
+}
+
+.dark-mode .magnifying-glass-icon-mobile {
+    width: 20px;
+    background-image: url("images/lupa-white.svg");
 }
 
 
@@ -1036,6 +1069,10 @@ footer {
         gap: 17rem;
     }
 
+    .search-bar-container {
+        width: 60%;
+    }
+
 }
 
 @media (max-width:1280px) {
@@ -1061,6 +1098,12 @@ footer {
     .dark-mode .magnifying-glass-icon-pc-dark {
         display: block;
     }
+
+    .search-bar-popup-content {
+        width: 50%;
+    }
+
+
 }
 
 
@@ -1125,6 +1168,7 @@ footer {
     .navbar-content {
         grid-template-columns: 100px 1.7fr .4fr;
     }
+
 
 
 }
@@ -1343,6 +1387,10 @@ footer {
 }
 
 @media (max-width:768px) {
+    .search-bar-popup-content {
+        width: 60%;
+    }
+
     .green-container {
         margin-top: 100px;
         margin-left: 3.5rem;
@@ -1372,15 +1420,17 @@ footer {
 
 @media (max-width:719px) {
     .side-navbar-mobile {
-        width: 0;
-        display: inline-block;
+        width: 100vw;
+        display: none;
         height: 0;
+        z-index: 1000;
 
     }
 
     .side-navbar-mobile-top {
-        height: 47px;
+        height: 57px;
         display: none;
+        width: 100vw;
         align-items: center;
         justify-content: space-between;
         background-color: var(--color-white);
@@ -1504,11 +1554,6 @@ footer {
         grid-column-gap: 10rem;
         grid-row-gap: 0;
     }
-
-    .mobile-image-top {
-        margin-top: 13px;
-    }
-
 }
 
 @media (max-width:640px) {
@@ -1556,6 +1601,18 @@ footer {
 }
 
 @media (max-width:479px) {
+    .search-bar-popup-content {
+        width: 90%;
+    }
+
+    .popup-search-bar-input {
+        margin-left: 1rem;
+    }
+
+    .lupa-popup {
+        width: 40px;
+    }
+
     .mobile-image-top {
         height: 245px;
         margin-top: -35px;

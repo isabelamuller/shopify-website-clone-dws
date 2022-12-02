@@ -8,31 +8,38 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=JetBrains+Mono:wght@400;700;800&amp;display=swap"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=JetBrains+Mono:wght@400;700;800&amp;display=swap"
     />
-    <link href="//db.onlinewebfonts.com/c/5fa1ec48152ace8c047272fd1ea6f9c3?family=SophistoOTW01-AGauge" rel="stylesheet" type="text/css"/>
     <link
-    rel="icon"
-    type="image/png"
-    href="https://cdn.shopify.com/static/shopify-favicon.png"
+      href="//db.onlinewebfonts.com/c/5fa1ec48152ace8c047272fd1ea6f9c3?family=SophistoOTW01-AGauge"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.shopify.com/static/shopify-favicon.png"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Shopify Developers Platform-Build. Innovate. Get paid.</title>
   </head>
-  <body class="body">
+  <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <div class="hamburguer-icon" onclick="openSideNav()">
           <i class="fa fa-bars"></i>
         </div>
         <div class="logo-mobile-light"></div>
         <div class="logo-mobile-dark"></div>
-        <div class="magnifying-glass-icon-mobile"></div>
+        <div
+          class="magnifying-glass-icon-mobile"
+          id="magnifying-glass-icon-mobile"
+        ></div>
         <div class="navbar-content">
           <div class="logo-pc-light"></div>
           <div class="logo-pc-dark"></div>
@@ -46,7 +53,7 @@
               </li>
               <li class="navbar-link">
                 <a href="https://shopify.dev/custom-storefronts"
-                >Custom storefronts</a
+                  >Custom storefronts</a
                 >
               </li>
               <li class="navbar-link">
@@ -55,26 +62,26 @@
               <span class="dot"></span>
               <li class="navbar-link">
                 <button
-                onclick="dropdownActive()"
-                id="dropdown-btn"
-                class="apis-references"
-                type="button"
+                  onclick="dropdownActive()"
+                  id="dropdown-btn"
+                  class="apis-references"
+                  type="button"
                 >
-                APIs and references
-              </button>
-            </li>
-            <div class="dropdown">
-              <div class="mobile-dropdown"></div>
-              <div
-              class="dropdown-menu"
-              id="dropdown"
-              aria-labelledby="dropdownMenuButton"
-              >
-              <ul class="dropdown-menu-list">
-                <li class="wrap-item">
-                  <div class="dropdown-title">
-                    <a>Apps</a>
-                  </div>
+                  APIs and references
+                </button>
+              </li>
+              <div class="dropdown">
+                <div class="mobile-dropdown"></div>
+                <div
+                  class="dropdown-menu"
+                  id="dropdown"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <ul class="dropdown-menu-list">
+                    <li class="wrap-item">
+                      <div class="dropdown-title">
+                        <a>Apps</a>
+                      </div>
                       <ul>
                         <li class="dropdown-list-item">
                           <a class="dropdown-item">GraphQL Admin API</a>
@@ -127,54 +134,57 @@
             <div class="search-bar-container" id="search-bar-container">
               <input class="search-bar" type="search" placeholder="Search" />
             </div>
-            <div class="magnifying-glass-icon-pc"></div>
+            <div
+              class="magnifying-glass-icon-pc"
+              id="magnifying-glass-icon-pc"
+            ></div>
             <div class="magnifying-glass-icon-pc-dark"></div>
             <img
-            src="images/moon.svg"
-            class="moon-icon"
-            onclick="modeSwitcher()"
+              src="images/moon.svg"
+              class="moon-icon"
+              onclick="modeSwitcher()"
             />
             <img
               src="images/yellow-sun.svg"
               class="sun-icon"
               onclick="modeSwitcher()"
-              />
-              <div class="mini-menu-right">
-                <ul>
-                  <li class="mini-menu-right-list-item">
-                    <a href="https://accounts.shopify.com/lookup?">Log in</a>
-                  </li>
-                  <li class="mini-menu-right-list-item">
-                    <a href="https://accounts.shopify.com/signup">Sign up</a>
-                  </li>
-                </ul>
-              </div>
+            />
+            <div class="mini-menu-right">
+              <ul>
+                <li class="mini-menu-right-list-item">
+                  <a href="https://accounts.shopify.com/lookup?">Log in</a>
+                </li>
+                <li class="mini-menu-right-list-item">
+                  <a href="https://accounts.shopify.com/signup">Sign up</a>
+                </li>
+              </ul>
             </div>
-          <div class="search-bar-popup" id="search-bar-popup">
-            <div class="search-bar-popup-content">
-              <div class="lupa-popup"></div>
-              <input
+          </div>
+        </div>
+        <div class="search-bar-popup" id="search-bar-popup">
+          <div class="search-bar-popup-content">
+            <div class="lupa-popup"></div>
+            <input
               type="search"
               placeholder="Search"
               class="popup-search-bar-input"
-              />
-              <div class="custom-select-menu">
-                <select class="select-box">
-                  <option value="0">Unstable</option>
-                  <option value="1">2023-01 release candidate</option>
-                  <option value="2" selected="selected">2022-10 latest</option>
-                  <option value="3">2022-07</option>
-                  <option value="4">2022-04</option>
-                  <option value="5">2022-01</option>
-                </select>
-                <div class="up-and-down-arrow-icon"></div>
-              </div>
+            />
+            <div class="custom-select-menu">
+              <select class="select-box">
+                <option value="0">Unstable</option>
+                <option value="1">2023-01 release candidate</option>
+                <option value="2" selected="selected">2022-10 latest</option>
+                <option value="3">2022-07</option>
+                <option value="4">2022-04</option>
+                <option value="5">2022-01</option>
+              </select>
+              <div class="up-and-down-arrow-icon"></div>
             </div>
           </div>
         </div>
       </nav>
-      <!-- <nav class="side-navbar-mobile" id="side-nav">
-        <div class="side-navbar-mobile-top">
+      <nav class="side-navbar-mobile" id="side-nav">
+        <div class="side-navbar-mobile-top" id="side-nav-mobile-top">
           <a
           href="javascript:void(0)"
           class="close-btn-side-nav"
@@ -183,13 +193,13 @@
           >
           <div class="logo-mobile-light-side-nav"></div>
         </div>
-        <div class="side-nav-menu-container">
+        <div class="side-nav-menu-container" id="side-nav-menu-container">
           <div class="side-nav-menu-wrapper">
             <h3>Menu</h3>
             <img src="images/down-arrow.svg" class="down-arrow-icon" />
           </div>
         </div>
-      </nav> -->
+      </nav>
     </header>
     <main>
       <div class="top-page">
@@ -201,7 +211,7 @@
               <h1>
                 Build anything.<br />
                 Reimagine commerce.
-                
+
                 <p>
                   Millions of merchants trust Shopify to run their business—but
                   they need developers to build the tools that help them achieve
@@ -219,15 +229,15 @@
                   <p>
                     Expansive
                     <a
-                    href="https://shopify.dev/api/admin-graphql"
-                    class="links-inside-text"
-                    >GraphQL</a
+                      href="https://shopify.dev/api/admin-graphql"
+                      class="links-inside-text"
+                      >GraphQL</a
                     >
                     and
                     <a
-                    href="https://shopify.dev/api/admin-rest"
-                    class="links-inside-text"
-                    >REST APIs</a
+                      href="https://shopify.dev/api/admin-rest"
+                      class="links-inside-text"
+                      >REST APIs</a
                     >
                     let you integrate into Shopify's admin, online store,
                     checkout, and more.
@@ -240,14 +250,14 @@
                   <p>
                     Embed your app's features with
                     <a
-                    href="https://shopify.dev/apps/tools/app-bridge"
-                    class="links-inside-text"
-                    >App Bridge</a
+                      href="https://shopify.dev/apps/tools/app-bridge"
+                      class="links-inside-text"
+                      >App Bridge</a
                     >. Create high quality experiences with the ready-to-build
                     <a
-                    href="https://shopify.dev/apps/tools/polaris"
-                    class="links-inside-text"
-                    >Polaris</a
+                      href="https://shopify.dev/apps/tools/polaris"
+                      class="links-inside-text"
+                      >Polaris</a
                     >
                     component library.
                   </p>
@@ -259,15 +269,15 @@
                   <p>
                     Use
                     <a
-                    href="https://shopify.dev/api/liquid"
-                    class="links-inside-text"
-                    >Liquid</a
+                      href="https://shopify.dev/api/liquid"
+                      class="links-inside-text"
+                      >Liquid</a
                     >
                     to build beautiful theme templates. Get started with
                     <a
-                    href="https://shopify.dev/themes/tools/dawn"
-                    class="links-inside-text"
-                    >Dawn</a
+                      href="https://shopify.dev/themes/tools/dawn"
+                      class="links-inside-text"
+                      >Dawn</a
                     >, our blazingly fast, accessible reference theme.
                   </p>
                 </h3>
@@ -282,20 +292,20 @@
                       href="https://shopify.dev/api/storefront"
                       class="links-inside-text"
                       >Storefront API</a
-                      >
-                      and SDKs, plus any front-end stack you want. Use
-                      <a
+                    >
+                    and SDKs, plus any front-end stack you want. Use
+                    <a
                       href="https://shopify.dev/marketplaces"
                       class="links-inside-text"
                       >Marketplace Kit</a
-                      >
-                      to connect your platform and its users to millions of
-                      Shopify merchants and their products.
-                    </p>
+                    >
+                    to connect your platform and its users to millions of
+                    Shopify merchants and their products.
+                  </p>
                 </h3>
                 <h3>Start building:</h3>
               </div>
-              
+
               <section class="cards">
                 <div class="card-building">
                   <img
@@ -308,8 +318,8 @@
                 </div>
                 <div class="card-building">
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/themes-2x-3daa82803f77c0838ae385b920a20267421339d0a999edb56144269614f7129c.png"
-                  class="card-img"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/themes-2x-3daa82803f77c0838ae385b920a20267421339d0a999edb56144269614f7129c.png"
+                    class="card-img"
                   />
                   <div class="card-container">
                     <h4>Themes</h4>
@@ -317,8 +327,8 @@
                 </div>
                 <div class="card-building">
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/custom-storefronts-2x-83288485a14b647b00d43f74ce94fab23a97ea37cbf20d860f5eeaec5fb4ef99.png"
-                  class="card-img"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/custom-storefronts-2x-83288485a14b647b00d43f74ce94fab23a97ea37cbf20d860f5eeaec5fb4ef99.png"
+                    class="card-img"
                   />
                   <div class="card-container">
                     <h4>Storefronts</h4>
@@ -326,8 +336,8 @@
                 </div>
                 <div class="card-building">
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/marketplaces-2x-797184422250057c43fe3ba1920c6654644b03b19887e464b75dac6f7be7dcee.png"
-                  class="card-img"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/marketplaces-2x-797184422250057c43fe3ba1920c6654644b03b19887e464b75dac6f7be7dcee.png"
+                    class="card-img"
                   />
                   <div class="card-container">
                     <h4>Marketplaces</h4>
@@ -368,9 +378,9 @@
                 <p>
                   Sell your theme to merchants building their brands on the
                   <a
-                  href="https://themes.shopify.com/?shpxid=8096431a-1309-4B8E-257F-6F7C75D042AF"
-                  class="links-inside-text"
-                  >Shopify Theme Store</a
+                    href="https://themes.shopify.com/?shpxid=8096431a-1309-4B8E-257F-6F7C75D042AF"
+                    class="links-inside-text"
+                    >Shopify Theme Store</a
                   >, which offers flexible pricing and targeted merchandising.
                 </p>
               </h3>
@@ -381,8 +391,8 @@
               <div class="content-wrap">
                 <div class="text-and-img">
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/coin-2x-adc588d26d9d7613d579743dad21b90673f4e634785472ed7f31e01ca96f3d30.png"
-                  class="box-icon"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/coin-2x-adc588d26d9d7613d579743dad21b90673f4e634785472ed7f31e01ca96f3d30.png"
+                    class="box-icon"
                   />
                   <h4>
                     $12.5B USD
@@ -392,15 +402,15 @@
 
                 <div class="text-and-img">
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/hearts-2x-a7b1fd75f8d3e15f31a3a9e989caf0652577e2a3645e0b7592771f832bbe6dc7.png"
-                  class="box-icon"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/hearts-2x-a7b1fd75f8d3e15f31a3a9e989caf0652577e2a3645e0b7592771f832bbe6dc7.png"
+                    class="box-icon"
                   />
                   <h4>3 in 4 merchants use apps</h4>
                 </div>
                 <div class="text-and-img">
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/app-2x-23fb62a245021a57818f731c5680cce151fa874356244bb6cfc4652be7161749.png"
-                  class="box-icon"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/app-2x-23fb62a245021a57818f731c5680cce151fa874356244bb6cfc4652be7161749.png"
+                    class="box-icon"
                   />
                   <h4>Average number of apps installed per merchant</h4>
                 </div>
@@ -413,16 +423,16 @@
         <div class="first-card">
           <div class="first-card-container-content">
             <img
-            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/icons/icon-community-large-4be2381094828c01d2bfaad7a5e950e519c4aee6e20b07bb333dea1bb67c3dc6.png"
-            class="first-card-img-content"
+              src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/icons/icon-community-large-4be2381094828c01d2bfaad7a5e950e519c4aee6e20b07bb333dea1bb67c3dc6.png"
+              class="first-card-img-content"
             />
             <h3>Join a community of builders</h3>
           </div>
         </div>
         <div class="card">
           <img
-          src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/forums-2x-0b1112e404a9beeaceb81274b6fbfba5b75c90c184fedb18b98422f9da0a2d3c.png"
-          class="card-img-content"
+            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/forums-2x-0b1112e404a9beeaceb81274b6fbfba5b75c90c184fedb18b98422f9da0a2d3c.png"
+            class="card-img-content"
           />
           <div class="card-container-content">
             <h4 class="card-title">Developer forums</h4>
@@ -431,7 +441,7 @@
         </div>
         <div class="card">
           <img
-          src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/slack-2x-b59376cc73a15b3747bd12c549b9d264f967c99f8187019378df860431395833.png"
+            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/slack-2x-b59376cc73a15b3747bd12c549b9d264f967c99f8187019378df860431395833.png"
             class="card-img-content"
           />
           <div class="card-container-content">
@@ -441,8 +451,8 @@
         </div>
         <div class="card">
           <img
-          src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/twitter-2x-bd0e322adf375221ee789532e836ffc784ad768c65b5b0d2cbbf20edbf2f2fde.png"
-          class="card-img-content"
+            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/twitter-2x-bd0e322adf375221ee789532e836ffc784ad768c65b5b0d2cbbf20edbf2f2fde.png"
+            class="card-img-content"
           />
           <div class="card-container-content">
             <h4 class="card-title">@ShopifyDevs on Twitter</h4>
@@ -451,8 +461,8 @@
         </div>
         <div class="card">
           <img
-          src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/changelog-2x-b8e1db70ca0ce302bed65288428a19a3aabc81437f94dc5e90498ab6fbb9ec62.png"
-          class="card-img-content"
+            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/changelog-2x-b8e1db70ca0ce302bed65288428a19a3aabc81437f94dc5e90498ab6fbb9ec62.png"
+            class="card-img-content"
           />
           <div class="card-container-content">
             <h4 class="card-title">Developer Changelog</h4>
@@ -461,8 +471,8 @@
         </div>
         <div class="card">
           <img
-          src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/youtube-2x-f585ebedbd6cc524359f4f975bec40b6276337f651653c552f5769a867ade698.png"
-          class="card-img-content"
+            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/youtube-2x-f585ebedbd6cc524359f4f975bec40b6276337f651653c552f5769a867ade698.png"
+            class="card-img-content"
           />
           <div class="card-container-content">
             <h4 class="card-title">ShopifyDevs YouTube channel</h4>
@@ -471,8 +481,8 @@
         </div>
         <div class="card">
           <img
-          src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/discord-2x-fa38174b9b7375626eb783a843a7a1d92da0869632540338bf6063488154babf.png"
-          class="card-img-content"
+            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/discord-2x-fa38174b9b7375626eb783a843a7a1d92da0869632540338bf6063488154babf.png"
+            class="card-img-content"
           />
           <div class="card-container-content">
             <h4 class="card-title">ShopifyDevs Discord server</h4>
@@ -481,8 +491,8 @@
         </div>
         <div class="card">
           <img
-          src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/shopify-2x-533cfc728abb341ee379217370a0c5be8d1a555e47eae85abe657675f367a37d.png"
-          class="card-img-content"
+            src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/icons/48/shopify-2x-533cfc728abb341ee379217370a0c5be8d1a555e47eae85abe657675f367a37d.png"
+            class="card-img-content"
           />
           <div class="card-container-content">
             <h4 class="card-title">Shopify Partners blog</h4>
@@ -517,22 +527,22 @@
                 <h4>Social</h4>
                 <p>
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitch-4503960721a44bc55ff0e5061d1c0b19477d8cf51698db1a688ce796dde7a497.svg"
-                  style="width: 15px; height: 12px"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitch-4503960721a44bc55ff0e5061d1c0b19477d8cf51698db1a688ce796dde7a497.svg"
+                    style="width: 15px; height: 12px"
                   />
                   Twitch
                 </p>
                 <p>
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/youtube-e1672f4ec6b07be386c1f2c664b9a8bf9d6b1612e5028a7c0c54468e70db8dab.svg"
-                  style="width: 15px; height: 12px"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/youtube-e1672f4ec6b07be386c1f2c664b9a8bf9d6b1612e5028a7c0c54468e70db8dab.svg"
+                    style="width: 15px; height: 12px"
                   />
                   Youtube
                 </p>
                 <p>
                   <img
-                  src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitter-91f2e94dd289e902dced03895746ea6bd583fe0254ebf61ea506e2a95ba9d862.svg"
-                  style="width: 15px; height: 12px"
+                    src="https://cdn.shopify.com/shopifycloud/shopify_dev/assets/twitter-91f2e94dd289e902dced03895746ea6bd583fe0254ebf61ea506e2a95ba9d862.svg"
+                    style="width: 15px; height: 12px"
                   />
                   Twitter
                 </p>
