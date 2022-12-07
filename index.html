@@ -31,7 +31,7 @@
   <body>
     <header>
       <nav class="navbar" id="navbar">
-        <div class="hamburguer-icon" onclick="openSideNav()">
+        <div class="hamburger-icon" id="hamburger-icon">
           <i class="fa fa-bars"></i>
         </div>
         <div class="logo-mobile-light"></div>
@@ -62,7 +62,6 @@
               <span class="dot"></span>
               <li class="navbar-link">
                 <button
-                  onclick="dropdownActive()"
                   id="dropdown-btn"
                   class="apis-references"
                   type="button"
@@ -70,8 +69,7 @@
                   APIs and references
                 </button>
               </li>
-              <div class="dropdown">
-                <div class="mobile-dropdown"></div>
+              <div class="dropdown-apis">
                 <div
                   class="dropdown-menu"
                   id="dropdown"
@@ -183,21 +181,97 @@
           </div>
         </div>
       </nav>
-      <nav class="side-navbar-mobile" id="side-nav">
+      <nav class="side-navbar-mobile">
         <div class="side-navbar-mobile-top" id="side-nav-mobile-top">
           <a
-          href="javascript:void(0)"
-          class="close-btn-side-nav"
-          onclick="closeSideNav()"
-          >&times;</a
+            href="javascript:void(0)"
+            class="close-btn-side-nav"
+            id="close-btn-side-nav"
+            >&times;</a
           >
           <div class="logo-mobile-light-side-nav"></div>
+          <div class="logo-mobile-dark-side-nav"></div>
         </div>
         <div class="side-nav-menu-container" id="side-nav-menu-container">
-          <div class="side-nav-menu-wrapper">
-            <h3>Menu</h3>
-            <img src="images/down-arrow.svg" class="down-arrow-icon" />
+          <div class="side-nav-menu-wrapper" id="side-nav-menu-wrapper">
+            <div class="text-icon-menu-side-nav">
+              <h3>Menu</h3>
+              <img
+                src="images/down-arrow.svg"
+                class="arrow-side-nav open"
+                id="arrow-side-nav"
+              />
+            </div>
+            <div class="dropdown-side-nav">
+              <div
+                class="side-nav-api-dropdown-container"
+                id="side-nav-api-dropdown-container"
+              >
+                <ul class="side-nav-dropdown-list">
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Apps</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Themes</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Custom storefronts</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Marketplaces</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href=""
+                      >APIs and references
+                      <ul class="side-nav-api-dropdown">
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">GraphQL Admin API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">REST Admin API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Liquid</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Ajax API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Storefront API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Hydrogen</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">View all</a>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="menu-side-nav-under-top">
+          <ul class="list-menu-under-top">
+            <li class="list-item-menu-under-top">
+              <a href="https://accounts.shopify.com/lookup">Log in</a>
+            </li>
+            <li class="list-item-menu-under-top">
+              <a href="https://accounts.shopify.com/signup">Sign up</a>
+            </li>
+            <img
+              src="images/moon.svg"
+              class="moon-icon"
+              onclick="modeSwitcher()"
+            />
+            <img
+              src="images/yellow-sun.svg"
+              class="sun-icon"
+              onclick="modeSwitcher()"
+            />
+          </ul>
         </div>
       </nav>
     </header>
