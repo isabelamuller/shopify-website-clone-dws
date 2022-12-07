@@ -7,11 +7,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <script src="app.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=JetBrains+Mono:wght@400;700;800&amp;display=swap"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/5fa1ec48152ace8c047272fd1ea6f9c3?family=SophistoOTW01-AGauge"
+      rel="stylesheet"
+      type="text/css"
     />
     <link
       rel="icon"
@@ -23,13 +30,16 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <div class="hamburguer-icon">
+      <nav class="navbar" id="navbar">
+        <div class="hamburger-icon" id="hamburger-icon">
           <i class="fa fa-bars"></i>
         </div>
         <div class="logo-mobile-light"></div>
         <div class="logo-mobile-dark"></div>
-        <div class="magnifying-glass-icon-mobile"></div>
+        <div
+          class="magnifying-glass-icon-mobile"
+          id="magnifying-glass-icon-mobile"
+        ></div>
         <div class="navbar-content">
           <div class="logo-pc-light"></div>
           <div class="logo-pc-dark"></div>
@@ -52,7 +62,6 @@
               <span class="dot"></span>
               <li class="navbar-link">
                 <button
-                  onclick="dropdownActive()"
                   id="dropdown-btn"
                   class="apis-references"
                   type="button"
@@ -60,10 +69,7 @@
                   APIs and references
                 </button>
               </li>
-              <div class="dropdown">
-                <div class="mobile-dropdown">
-
-                </div>
+              <div class="dropdown-apis">
                 <div
                   class="dropdown-menu"
                   id="dropdown"
@@ -123,13 +129,24 @@
             </ul>
           </div>
           <div class="menu-right">
-            <div class="search-bar-container">
+            <div class="search-bar-container" id="search-bar-container">
               <input class="search-bar" type="search" placeholder="Search" />
             </div>
-            <div class="magnifying-glass-icon-pc"></div>
+            <div
+              class="magnifying-glass-icon-pc"
+              id="magnifying-glass-icon-pc"
+            ></div>
             <div class="magnifying-glass-icon-pc-dark"></div>
-            <img src="images/moon.svg" class="moon-icon" onclick="modeSwitcher()"/>
-            <img src="images/yellow-sun.svg" class="sun-icon" onclick="modeSwitcher()"/>
+            <img
+              src="images/moon.svg"
+              class="moon-icon"
+              onclick="modeSwitcher()"
+            />
+            <img
+              src="images/yellow-sun.svg"
+              class="sun-icon"
+              onclick="modeSwitcher()"
+            />
             <div class="mini-menu-right">
               <ul>
                 <li class="mini-menu-right-list-item">
@@ -142,6 +159,120 @@
             </div>
           </div>
         </div>
+        <div class="search-bar-popup" id="search-bar-popup">
+          <div class="search-bar-popup-content">
+            <div class="lupa-popup"></div>
+            <input
+              type="search"
+              placeholder="Search"
+              class="popup-search-bar-input"
+            />
+            <div class="custom-select-menu">
+              <select class="select-box">
+                <option value="0">Unstable</option>
+                <option value="1">2023-01 release candidate</option>
+                <option value="2" selected="selected">2022-10 latest</option>
+                <option value="3">2022-07</option>
+                <option value="4">2022-04</option>
+                <option value="5">2022-01</option>
+              </select>
+              <div class="up-and-down-arrow-icon"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="side-navbar-mobile">
+        <div class="side-navbar-mobile-top" id="side-nav-mobile-top">
+          <a
+            href="javascript:void(0)"
+            class="close-btn-side-nav"
+            id="close-btn-side-nav"
+            >&times;</a
+          >
+          <div class="logo-mobile-light-side-nav"></div>
+          <div class="logo-mobile-dark-side-nav"></div>
+        </div>
+        <div class="side-nav-menu-container" id="side-nav-menu-container">
+          <div class="side-nav-menu-wrapper" id="side-nav-menu-wrapper">
+            <div class="text-icon-menu-side-nav">
+              <h3>Menu</h3>
+              <img
+                src="images/down-arrow.svg"
+                class="arrow-side-nav open"
+                id="arrow-side-nav"
+              />
+            </div>
+            <div class="dropdown-side-nav">
+              <div
+                class="side-nav-api-dropdown-container"
+                id="side-nav-api-dropdown-container"
+              >
+                <ul class="side-nav-dropdown-list">
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Apps</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Themes</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Custom storefronts</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href="">Marketplaces</a>
+                  </li>
+                  <li class="side-nav-dropdown-list-item">
+                    <a href=""
+                      >APIs and references
+                      <ul class="side-nav-api-dropdown">
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">GraphQL Admin API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">REST Admin API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Liquid</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Ajax API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Storefront API</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">Hydrogen</a>
+                        </li>
+                        <li class="side-nav-api-dropdown-item">
+                          <a href="">View all</a>
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-side-nav-under-top">
+          <ul class="list-menu-under-top">
+            <li class="list-item-menu-under-top">
+              <a href="https://accounts.shopify.com/lookup">Log in</a>
+            </li>
+            <li class="list-item-menu-under-top">
+              <a href="https://accounts.shopify.com/signup">Sign up</a>
+            </li>
+            <img
+              src="images/moon.svg"
+              class="moon-icon"
+              onclick="modeSwitcher()"
+            />
+            <img
+              src="images/yellow-sun.svg"
+              class="sun-icon"
+              onclick="modeSwitcher()"
+            />
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -149,7 +280,7 @@
         <section class="main-first-half">
           <div class="first-half-wrapper">
             <div class="mobile-image-top"></div>
-            <div class="mobile-image-top-dark"></div>           
+            <div class="mobile-image-top-dark"></div>
             <div class="first-text">
               <h1>
                 Build anything.<br />
@@ -518,4 +649,5 @@
       </section>
     </footer>
   </body>
+  <script src="app.js"></script>
 </html>
