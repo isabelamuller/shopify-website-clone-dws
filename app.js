@@ -45,7 +45,6 @@ const closeBtn = document.getElementById("close-btn-side-nav");
 
 hamburgerIcon.addEventListener('click', () => {
    sideNav.classList.toggle('open');
-   
    pcNav.classList.toggle('close');
    document.body.style.overflow = "hidden"
 });
