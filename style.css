@@ -379,9 +379,13 @@ ul {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.15);
+}
+
+.search-bar-popup.open {
+    display: block;
 }
 
 .search-bar-popup-content {
@@ -1049,30 +1053,6 @@ footer {
 
 /* responsividade */
 
-/* @media (max-width:2560px) {
-    .menu-left {
-        width: fit-content;
-        margin-left: 450px;
-    }
-    .menu-right {
-        width: fit-content;
-        margin-left: -160px;
-    }
-    .image-main-second-light {
-        margin-top: -310px;
-    }
-    .image-main-second-dark {
-        margin-top: -310px;
-    }
-    .green-container {
-        margin-top: -590px;
-    }
-    .green-content {
-        padding-left: 50rem;
-        gap:4rem;
-    }
-} */
-
 @media (max-width:1600px) {
     .green-content {
         gap: 24rem;
@@ -1131,8 +1111,6 @@ footer {
     .search-bar-popup-content {
         width: 50%;
     }
-
-
 }
 
 
@@ -1143,7 +1121,6 @@ footer {
 }
 
 @media (max-width:1050px) {
-
     .card {
         width: 200px;
     }
@@ -1197,9 +1174,6 @@ footer {
     .navbar-content {
         grid-template-columns: 100px 1.7fr .4fr;
     }
-
-
-
 }
 
 @media (max-width:1000px) {
@@ -1231,7 +1205,6 @@ footer {
     .mobile-image-top {
         display: inline-block;
     }
-
 
     .mobile-image-middle {
         display: inline-block;
@@ -1366,7 +1339,6 @@ footer {
         margin-left: 20px;
         margin-right: 10px;
     }
-
 }
 
 @media (max-width:938px) {
@@ -1389,7 +1361,6 @@ footer {
     .list-footer ul {
         gap: 50px;
     }
-
 }
 
 @media (max-width:859px) {
@@ -1443,16 +1414,17 @@ footer {
     .green-container {
         margin-top: 120px;
     }
-
 }
 
 @media (max-width:719px) {
     .navbar.close {
-        transform: translateX(200%);
+        transform: translateX(100%);
     }
+
     .navbar {
         transform: translateX(0);
-        transition: 260ms linear;
+        transition: 230ms linear;
+        position: fixed;
     }
 
 
@@ -1460,15 +1432,14 @@ footer {
         width: 100vw;
         display: inline-block;
         height: 100vh;
-        transform: translateX(-100%);
-        transition: 260ms linear;
+        transform: translateX(-110%);
+        transition: 290ms linear;
         position: absolute;
     }
 
-
     .side-navbar-mobile.open {
         transform: translateX(0);
-        transition: 260ms linear;
+        transition: 290ms linear;
     }
 
     .side-navbar-mobile-top {
@@ -1483,11 +1454,11 @@ footer {
     .side-nav-menu-container {
         background-color: var(--color-white);
         width: 100vw;
-        display: flex;
+        display: block;
         height: auto;
-        /* aqui em cima */
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
+        padding-left: 1.3rem;
         align-items: center;
         justify-content: center;
         border: 1px solid var(--color-border-top-side-nav);
@@ -1524,7 +1495,6 @@ footer {
         padding-left: 1.5rem;
     }
 
-
     .close-btn-side-nav {
         font-size: 22px;
         padding-left: .7rem;
@@ -1554,25 +1524,35 @@ footer {
     }
 
     .side-nav-api-dropdown-container {
-        display: none;
-        position: relative;
-        z-index: 1;
-        margin-top: -5px;
+        margin-top: 0;
+        height: 0;
+        width: calc(100vw - 2.5rem);
         border-top: 1px solid var(--color-border-top-side-nav);
         background-color: var(--color-bg-menu-side-nav);
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+        transition-duration: 200ms;
+        transition-property: height;
     }
 
     .side-nav-api-dropdown-container.open {
-        transition: 3s ease-in-out;
-        display: flex;
+        height: 350px;
+        transition-duration: 200ms;
+        transition-property: height;
     }
 
     .side-nav-dropdown-list {
         margin-top: 10px;
         list-style-type: none;
+        opacity: 0;
+        transition-property: opacity;
         display: block;
+        transition-duration: 200ms;
+    }
+    .side-nav-dropdown-list.open {
+        transition-property: opacity;
+        transition-duration: 200ms;
+        opacity: 1;
     }
 
     .side-nav-dropdown-list-item {
@@ -1611,6 +1591,10 @@ footer {
         display: block;
     }
 
+    .list-menu-under-top.open {
+        display: none;
+    }
+
     .list-item-menu-under-top {
         padding-bottom: 1.2rem;
 
@@ -1638,7 +1622,7 @@ footer {
         font-size: 24px;
         line-height: normal;
     }
-    
+
 
     .second-text {
         padding: 0rem 4rem .5rem 3.5rem;

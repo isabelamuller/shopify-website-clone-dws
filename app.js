@@ -7,41 +7,53 @@ dropdownBtnPc.addEventListener('click', () => {
 })
 
 
+const moonIcon = document.getElementById("moon-icon");
+const moonIconMobile = document.getElementById("moon-icon-mobile");
+const sunIcon = document.getElementById("sun-icon");
+const sunIconMobile = document.getElementById("sun-icon-mobile");
 
-const modeSwitcher = () => {
-   let bodyElement = document.body;
-   bodyElement.classList.toggle("dark-mode");
+moonIcon.addEventListener('click', () => {
+   document.body.classList.toggle('dark-mode');
+})
+moonIconMobile.addEventListener('click', () => {
+   document.body.classList.toggle('dark-mode');
+})
+sunIconMobile.addEventListener('click', () => {
+   document.body.classList.toggle('dark-mode');
+})
+sunIcon.addEventListener('click', () => {
+   document.body.classList.remove('dark-mode');
+})
 
-}
 
-let popUp = document.getElementById("search-bar-popup");
-let searchBar = document.getElementById("search-bar-container");
-let searchBarMobile = document.getElementById("magnifying-glass-icon-mobile")
-let searchBarIcon = document.getElementById("magnifying-glass-icon-pc")
+const popUp = document.getElementById("search-bar-popup");
+const searchBar = document.getElementById("search-bar-container");
+const searchBarMobile = document.getElementById("magnifying-glass-icon-mobile")
+const searchBarIcon = document.getElementById("magnifying-glass-icon-pc")
 
-searchBar.onclick = () => {
-   popUp.style.display = "block";
-}
+searchBar.addEventListener('click', () => {
+   popUp.classList.toggle('open');
+})
 
-searchBarMobile.onclick = () => {
-   popUp.style.display = "block";
-}
-searchBarIcon.onclick = () => {
-   popUp.style.display = "block";
-}
+searchBarMobile.addEventListener('click', () => {
+   popUp.classList.toggle('open');
+})
 
-window.onclick = (event) => {
+searchBarIcon.addEventListener('click', () => {
+   popUp.classList.toggle('open');
+})
+
+window.addEventListener('click', (event) => {
    if (event.target === popUp) {
-      popUp.style.display = "none"
+      popUp.classList.remove('open')
    }
-}
+}) 
 
 
 const sideNav = document.getElementsByClassName("side-navbar-mobile")[0];
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const pcNav = document.getElementById("navbar");
 const closeBtn = document.getElementById("close-btn-side-nav");
-
 
 hamburgerIcon.addEventListener('click', () => {
    sideNav.classList.toggle('open');
@@ -55,12 +67,16 @@ closeBtn.addEventListener('click', () => {
    document.body.style.overflow = "scroll"
 })
 
+
 const menuBtnSideNav = document.getElementById("side-nav-menu-wrapper");
 const menuArrow = document.getElementById("arrow-side-nav")
 const dropdownMenuSideNav = document.getElementById("side-nav-api-dropdown-container");
+const menuUnderTopSideNav = document.getElementById("list-menu-under-top")
+const dropdownList = document.getElementById("side-nav-dropdown-list");
 
 menuBtnSideNav.addEventListener('click', () => {
    dropdownMenuSideNav.classList.toggle('open');
    menuArrow.classList.toggle("open");
-   menuBtnSideNav.classList.toggle('open');
+   menuUnderTopSideNav.classList.toggle('open')
+   dropdownList.classList.toggle("open")
 })

@@ -133,16 +133,8 @@
               id="magnifying-glass-icon-pc"
             ></div>
             <div class="magnifying-glass-icon-pc-dark"></div>
-            <img
-              src="images/moon.svg"
-              class="moon-icon"
-              onclick="modeSwitcher()"
-            />
-            <img
-              src="images/yellow-sun.svg"
-              class="sun-icon"
-              onclick="modeSwitcher()"
-            />
+            <img src="images/moon.svg" class="moon-icon" id="moon-icon" />
+            <img src="images/yellow-sun.svg" class="sun-icon" id="sun-icon" />
             <div class="mini-menu-right">
               <ul>
                 <li class="mini-menu-right-list-item">
@@ -198,59 +190,58 @@
                 id="arrow-side-nav"
               />
             </div>
-            <div class="dropdown-side-nav">
-              <div
-                class="side-nav-api-dropdown-container"
-                id="side-nav-api-dropdown-container"
-              >
-                <ul class="side-nav-dropdown-list">
-                  <li class="side-nav-dropdown-list-item">
-                    <a href="">Apps</a>
-                  </li>
-                  <li class="side-nav-dropdown-list-item">
-                    <a href="">Themes</a>
-                  </li>
-                  <li class="side-nav-dropdown-list-item">
-                    <a href="">Custom storefronts</a>
-                  </li>
-                  <li class="side-nav-dropdown-list-item">
-                    <a href="">Marketplaces</a>
-                  </li>
-                  <li class="side-nav-dropdown-list-item">
-                    <a href=""
-                      >APIs and references
-                      <ul class="side-nav-api-dropdown">
-                        <li class="side-nav-api-dropdown-item">
-                          <a href="">GraphQL Admin API</a>
-                        </li>
-                        <li class="side-nav-api-dropdown-item">
-                          <a href="">REST Admin API</a>
-                        </li>
-                        <li class="side-nav-api-dropdown-item">
-                          <a href="">Liquid</a>
-                        </li>
-                        <li class="side-nav-api-dropdown-item">
-                          <a href="">Ajax API</a>
-                        </li>
-                        <li class="side-nav-api-dropdown-item">
-                          <a href="">Storefront API</a>
-                        </li>
-                        <li class="side-nav-api-dropdown-item">
-                          <a href="">Hydrogen</a>
-                        </li>
-                        <li class="side-nav-api-dropdown-item">
-                          <a href="">View all</a>
-                        </li>
-                      </ul>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
+            <div
+              class="side-nav-api-dropdown-container"
+              id="side-nav-api-dropdown-container"
+            >
+              <ul class="side-nav-dropdown-list" id="side-nav-dropdown-list">
+                <li class="side-nav-dropdown-list-item">
+                  <a href="">Apps</a>
+                </li>
+                <li class="side-nav-dropdown-list-item">
+                  <a href="">Themes</a>
+                </li>
+                <li class="side-nav-dropdown-list-item">
+                  <a href="">Custom storefronts</a>
+                </li>
+                <li class="side-nav-dropdown-list-item">
+                  <a href="">Marketplaces</a>
+                </li>
+                <li class="side-nav-dropdown-list-item">
+                  <a href=""
+                    >APIs and references
+                    <ul class="side-nav-api-dropdown">
+                      <li class="side-nav-api-dropdown-item">
+                        <a href="">GraphQL Admin API</a>
+                      </li>
+                      <li class="side-nav-api-dropdown-item">
+                        <a href="">REST Admin API</a>
+                      </li>
+                      <li class="side-nav-api-dropdown-item">
+                        <a href="">Liquid</a>
+                      </li>
+                      <li class="side-nav-api-dropdown-item">
+                        <a href="">Ajax API</a>
+                      </li>
+                      <li class="side-nav-api-dropdown-item">
+                        <a href="">Storefront API</a>
+                      </li>
+                      <li class="side-nav-api-dropdown-item">
+                        <a href="">Hydrogen</a>
+                      </li>
+                      <li class="side-nav-api-dropdown-item">
+                        <a href="">View all</a>
+                      </li>
+                    </ul>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          
         </div>
         <div class="menu-side-nav-under-top">
-          <ul class="list-menu-under-top">
+          <ul class="list-menu-under-top" id="list-menu-under-top">
             <li class="list-item-menu-under-top">
               <a href="https://accounts.shopify.com/lookup">Log in</a>
             </li>
@@ -260,12 +251,12 @@
             <img
               src="images/moon.svg"
               class="moon-icon"
-              onclick="modeSwitcher()"
+              id="moon-icon-mobile"
             />
             <img
               src="images/yellow-sun.svg"
               class="sun-icon"
-              onclick="modeSwitcher()"
+              id="sun-icon-mobile"
             />
           </ul>
         </div>
